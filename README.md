@@ -6,6 +6,6 @@ https://whimsical.com/festive-DwEVJSB8H9Cnsj4a4uPm6d
 
 https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 
-![Festive ERD](https://user-images.githubusercontent.com/109775689/193349054-a4765325-165c-4ed0-ab49-712962ec1157.png)
+![festive ERD](https://user-images.githubusercontent.com/109775689/193361170-74009a1a-9404-45df-ba61-240e80bf9628.png)
 
 
