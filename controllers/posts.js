@@ -26,11 +26,26 @@ function createPost(req, res, next) {
   })
 }
 
+function postsShow (req, res) {
+  Post.findById(req.params.id)
+  .populate("owner")
+  .then(post => {
+    res.render('posts/index', {
+      post,
+      title: "Thanks for Posting"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts/')
+    })
+}
 
 
 export {
   postsIndex,
   createPost,
+  postsShow,
 }
 
 
