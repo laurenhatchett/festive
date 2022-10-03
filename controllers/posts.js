@@ -25,20 +25,21 @@ function create(req, res) {
   req.body.owner = req.user.profile._id
   Post.create(req.body)
   .then(post => {
-    res.redirect('/posts')
+    console.log(post)
+    res.redirect(`/posts/${post._id}`)
   })
   .catch(err => {
   console.log(err)
-  res.redirect('/posts')
+  res.redirect('/posts/new')
   })
 }
 
 function show(req, res) {
   Post.findById(req.params.id)
-  .populate("owner")
   .then(post => {
-    res.render('posts/:id', {
+    res.render('posts/show', {
       post,
+      title: 'Details'
     })
   })
   .catch(err => {
