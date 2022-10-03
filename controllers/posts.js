@@ -36,10 +36,11 @@ function create(req, res) {
 
 function show(req, res) {
   Post.findById(req.params.id)
+  .populate('owner')
   .then(post => {
     res.render('posts/show', {
       post,
-      title: 'Details'
+      title: 'Are you ready to submit your post? '
     })
   })
   .catch(err => {
@@ -48,6 +49,20 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Post.findById(req.params.id)
+  .populate('owner')
+  .then(post => {
+    res.render('posts/edit', {
+      post: post,
+      title: 'Update Post'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/posts/show')
+  })
+}
 
 
 
@@ -57,4 +72,5 @@ export {
   postsIndex,
   create,
   show,
+  edit,
 }
