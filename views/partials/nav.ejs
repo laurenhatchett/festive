@@ -4,11 +4,28 @@
 </head>
 <body>
   <nav>
+    <div class="holidays-link">
+      Holidays
+    </div>
+    <div class="categories-link">
+      Categories
+    </div>
+    <div class="post-link">
+      <a href="/posts/new" <%- title === 'Add Post!' ? 'class="active"' : '' %>
+      >
+      Add Post
+      </a>
+    </div>
+    <div class="profiles-link">
+      Profiles
+    </div>
+    <div>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
+        <button type="submit">Logout</button>  
       </a>
     <% } else { %>
+    </div>
       <div 
         id="g_id_onload"
         data-client_id="<%= googleClientID %>"

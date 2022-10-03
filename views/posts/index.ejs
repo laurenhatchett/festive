@@ -2,27 +2,18 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Post</h1>
+  <h1> View of posts</h1>
 
-	<div>
-    <form action="" method="">
-      //do I need a method Override?
-      <input
-      type="text"
-      name="text"
-      autocomplete="off">
-      <select>
-        //holiday drop-down
-      </select>
-      <select>
-        //category drop-down
-      </select>
-
-      //author of posts 
-      <button type="submit">Submit Posts</button>
-    </form>
-
-  </div>
+  
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        🌮 
+        <a href="/posts/<%= post._id %>"><%= post.name %></a>
+      </li>
+    <% }) %>
+  </ul>
+	
 </section>
 
 <%- include('../partials/footer') %>
