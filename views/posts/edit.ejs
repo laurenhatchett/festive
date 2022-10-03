@@ -2,10 +2,10 @@
 <%- include('../partials/nav.ejs') %>
 
 <section>
+  
   <h1>Update Post!</h1>
-  <% if (user) { %>
-	<div>
-    <form id="new-form" action="/posts/" method="POST" >
+
+  <form id="post-form" action="/posts/<%= post._id %>?_method=PUT" method="POST">
       <input
       type="text"
       name="text"
@@ -22,10 +22,11 @@
       </select>
 
       //author of posts 
+
       <button type="submit">Save Post!</button>
     </form>
-    <% } %>
-  </div>
+  
+  
 </section>
 
 

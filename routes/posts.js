@@ -22,7 +22,7 @@ router.get('/:id/edit', postsCtrl.edit)
 router.post('/', postsCtrl.create)
 
 //PUT localhost:3000/posts/:id
-router.put('/', postsCtrl.update)
+router.put('/:id', postsCtrl.update)
 
 //DELETE localhost:3000/posts/:id
 router.delete('/:id', postsCtrl.delete)

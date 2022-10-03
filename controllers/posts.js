@@ -22,6 +22,7 @@ function newPost(req, res) {
 }
 
 function create(req, res) {
+  console.log('CREATE HIT')
   req.body.owner = req.user.profile._id
   Post.create(req.body)
   .then(post => {
@@ -49,26 +50,13 @@ function show(req, res) {
   })
 }
 
-// function edit(req, res) {
-//   Post.findById(req.params.id)
-//   .then(post => {
-//     res.render('posts/edit', {
-//       post: post,
-//       title: 'Update Post'
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/posts/show')
-//   })
-// }
 
 function edit(req, res) {
   Post.findById(req.params.id)
   .then (post => {
     res.render('posts/edit', {
-      post : post,
-      title: "edit post"
+      post,
+      title: 'Update Post'
     })
   })
   .catch(err => {
@@ -90,9 +78,16 @@ function deletePost(req, res) {
 }
 
 function update(req, res){
-  Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  Post.findByIdAndUpdate(req.params.id, req.body)
   .then(post => {
-    res.redirect(`posts/${post._id}`)
+    if (post.owner.equals(req.user.profile._id)){
+      post.updateOne(req.body)
+      then(updatedPost =>{
+        res.redirect(`posts/${post._id}`)
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
   })
   .catch(err => {
     console.log(err)
