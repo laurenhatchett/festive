@@ -12,16 +12,16 @@
   
 
   <a href="/posts/<%= post._id %>/edit">
-  <button type="submit">Edit  Post!</button>
+  <button type="submit">Edit Post!</button>
   </a>
 
 
- </section>
+  <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+    <button class="btn" type="submit">Delete post!
+    </button>
   </form>
 
-  <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-    <button>Delete post!</button>
-  </form>
+
 
 
 

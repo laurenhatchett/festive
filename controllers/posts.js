@@ -78,10 +78,10 @@ function edit(req, res) {
 }
 
 function deletePost(req, res) {
-  Post.findByIdAndDelete(req.params.postId)
+  Post.findById(req.params.id)
   .then(post => {
-    console.log(post)
-    res.redirect('/posts/')
+    post.delete()
+    res.redirect('/posts')
   })
   .catch(err => {
     console.log(err)
