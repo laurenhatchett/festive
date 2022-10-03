@@ -14,16 +14,18 @@ router.get('/new', postsCtrl.new)
 //GET localhost:3000/posts/:id
 router.get('/:id', postsCtrl.show)
 
-//GET localhost:3000/posts/:id/edit  .edit
+//GET localhost:3000/posts/:id/edit  
 router.get('/:id/edit', postsCtrl.edit)
 
 
 //POST localhost:3000/posts
 router.post('/', postsCtrl.create)
 
-//PUT localhost:3000/posts/:id   .update
+//PUT localhost:3000/posts/:id
+router.put('/', postsCtrl.update)
 
-//DELETE localhost:3000/posts/:id  .delete
+//DELETE localhost:3000/posts/:id
+router.delete('/:id', postsCtrl.delete)
 
 
 

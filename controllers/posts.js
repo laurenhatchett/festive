@@ -49,22 +49,56 @@ function show(req, res) {
   })
 }
 
+// function edit(req, res) {
+//   Post.findById(req.params.id)
+//   .then(post => {
+//     res.render('posts/edit', {
+//       post: post,
+//       title: 'Update Post'
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/posts/show')
+//   })
+// }
+
 function edit(req, res) {
   Post.findById(req.params.id)
-  .populate('owner')
-  .then(post => {
+  .then (post => {
     res.render('posts/edit', {
-      post: post,
-      title: 'Update Post'
+      post : post,
+      title: "edit post"
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/posts/show')
+    res.redirect("/")
   })
 }
 
+function deletePost(req, res) {
+  Post.findByIdAndDelete(req.params.postId)
+  .then(post => {
+    console.log(post)
+    res.redirect('/posts/')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
+function update(req, res){
+  Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(post => {
+    res.redirect(`posts/${post._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
 
 export {
@@ -73,4 +107,6 @@ export {
   create,
   show,
   edit,
+  deletePost as delete,
+  update,
 }

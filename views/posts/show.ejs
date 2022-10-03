@@ -5,13 +5,22 @@
 
   <h1><%= title %></h1>
 
-  <h2><%= post.owner ? post.owner.name : "Unknown"%>'s Post Details</h2>
+  <h2><%= post.owner ? post.owner.name : "Unknown"%>'s Post Details:</h2>
 
   <h1><%= post.text %></h1>
 
+  
+
+  <a href="/posts/<%= post._id %>/edit">
+  <button type="submit">Edit  Post!</button>
+  </a>
+
+
+ </section>
+  </form>
 
   <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-    <button>X</button>
+    <button>Delete post!</button>
   </form>
 
 
