@@ -10,11 +10,9 @@ const Schema = mongoose.Schema
 
 
 const postSchema = new Schema({
-  // text: {
-  //   type: String,
-  //   enum: ['recipes', 'activities', 'movies']
+  text: String,
+  //enum: ['recipes', 'activities', 'movies']
   // },
-  name: String,  //temporary
   owner: { type: Schema.Types.ObjectId, ref: "Profile"},
   category: String,
   // comments: [commentSchema]

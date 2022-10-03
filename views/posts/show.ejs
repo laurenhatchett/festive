@@ -1,7 +1,12 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
+<section>
 
+  <p><%= post.owner ? post.owner.name : "Unknown"%>'s New Post!</p>
+  <h1><%= post.text %></h1>
+
+</section>
 
 
 <%- include('./partials/footer') %>
