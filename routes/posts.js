@@ -17,7 +17,6 @@ router.get('/:id', postsCtrl.show)
 //GET localhost:3000/posts/:id/edit  
 router.get('/:id/edit', postsCtrl.edit)
 
-
 //POST localhost:3000/posts
 router.post('/', postsCtrl.create)
 

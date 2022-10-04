@@ -83,7 +83,7 @@ function update(req, res){
     if (post.owner.equals(req.user.profile._id)){
       post.updateOne(req.body)
       then(updatedPost =>{
-        res.redirect(`posts/${post._id}`)
+        res.redirect(`/posts/${post._id}`)
       })
     } else {
       throw new Error('NOT AUTHORIZED')
