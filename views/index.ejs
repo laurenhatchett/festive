@@ -10,12 +10,16 @@
         alt="<%= user.profile.name %> avatar"
       />
     </div>
+
+    <section>
+      <a href="/posts?category=Thanksgiving">Thanksgiving</a>
+    </section>
+
+
   <% } %>
 </main>
 
-<a class="text-decoration-none" href="/profiles/<%= profile._id %>">
-  <div class="card">
-    <% if (profile.avatar) { %>
+
 
 
 <%- include('./partials/footer') %>

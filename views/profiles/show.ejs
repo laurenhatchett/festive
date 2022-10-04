@@ -13,7 +13,23 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
   <% if (isSelf) { %>
     <h2>Your Posts!</h2>
+    
+    <% profile.posts.forEach(post =>{ %>
+      <%= post.text %> 
+      <%= post.category %> 
+    <% }) %> 
+
+    <h2>Saved Posts!</h2>
+    //show posts from other users that user has saved
   <% } %>
 </main>
+
+
+/
+
+
+
+
+
 
 <%- include('../partials/footer') %>

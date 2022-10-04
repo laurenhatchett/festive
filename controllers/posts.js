@@ -1,12 +1,13 @@
 import { Post } from '../models/post.js'
+import { Profile } from '../models/profile.js'
 
 
 function postsIndex(req, res) {
-  Post.find({})
+  Post.find(req.query)
   .then(posts => {
     res.render('posts', {
       posts,
-      title: 'Add Post!'
+      title: req.query ? req.query.category : "View posts"
     })
   })
   .catch(err => {
@@ -27,7 +28,13 @@ function create(req, res) {
   Post.create(req.body)
   .then(post => {
     console.log(post)
-    res.redirect(`/posts/${post._id}`)
+    Profile.updateOne(
+      {_id:req.user.profile._id},
+      {$push:{posts:post}}
+    )
+    .then(()=>{
+      res.redirect(`/posts/${post._id}`)
+    })
   })
   .catch(err => {
   console.log(err)

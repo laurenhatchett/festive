@@ -5,6 +5,10 @@ const Schema = mongoose.Schema
 const profileSchema = new Schema({
   name: String,
   avatar: String,
+  posts: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Post'
+  }]
 }, {
   timestamps: true
 })
