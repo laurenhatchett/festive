@@ -18,7 +18,13 @@
       <a href="/posts/<%= post._id %>"><%= post.text %></a>
     <% }) %> 
 
-  <% } %>
+  <% } else { %>
+    <h2> <%= profile.name %>'s Posts!</h2>
+    
+    <% profile.posts.forEach(post =>{ %>
+      <a href="/posts/<%= post._id %>"><%= post.text %></a>
+    <% }) %> 
+    <% } %>
 </main>
 
 

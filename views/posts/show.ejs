@@ -32,14 +32,9 @@
         <button type="submit">Add Comment</button>
     </form>
   </div>
-  <div>
-    <form id="delete-comment-form" action="/posts/<%= post._id %>/comments?method=DELETE"
-    method="POST">
-    <button type="submit">Delete Comment</button>
-    </form>
-  </div>
+  
 
-  <% if (author){ %>
+  <% if (isSelf){ %>
   <div>
     <a href="/posts/<%= post._id %>/edit">
       <button type="submit">Edit Post!</button>

@@ -47,11 +47,12 @@ function show(req, res) {
   .populate('owner')
   .populate('comments.owner')
   .then(post => {
+    const isSelf = post.owner._id.equals(req.user.profile._id)
     console.log(post)
     res.render('posts/show', {
       post,
       title: 'Post Details',
-      author: post?.owner.some(profile => profile._id.equals(req.user.profile._id))
+      isSelf
     })
   })
   .catch(err => {
