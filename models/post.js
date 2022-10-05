@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema ({
   text: String,
-  owner: {type: Schema.Types.ObjectId, ref: "Comment"}
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 
 

@@ -45,7 +45,9 @@ function create(req, res) {
 function show(req, res) {
   Post.findById(req.params.id)
   .populate('owner')
+  .populate('comments.owner')
   .then(post => {
+    console.log(post)
     res.render('posts/show', {
       post,
       title: 'Are you ready to submit your post? '
@@ -103,6 +105,7 @@ function update(req, res){
 }
 
 function createComments(req, res){
+  req.body.owner = req.user.profile._id
   Post.findById(req.params.id)
   .then(post => {
     post.comments.push(req.body)

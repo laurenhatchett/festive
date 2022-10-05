@@ -10,11 +10,19 @@
 
   <div>
     <div>
-      <h1><%= post.text %></h1>
+      <h1><%= post.text %></h1> 
+      <%= post.owner.name %> 
+      <img src="<%= post.owner.avatar  %>">
     </div>
     <div>
       <ul>
-        <li><% post.comment %> </li>
+        <% post.comments.forEach(comment =>{ %>
+          <li>
+            <img src="<%= comment.owner.avatar  %>">
+            <%= comment.owner.name %> 
+            <%= comment.text %>
+          </li>
+        <%  }) %> 
       </ul>
     </div>
     <div>
