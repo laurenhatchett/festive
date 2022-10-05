@@ -4,12 +4,15 @@
 </head>
 <body>
   <nav>
-    <div class="holidays-link">
-      Holidays
-    </div>
     <div class="categories-link">
       Categories
     </div>
+    <div class="viewposts-link">
+      <a href="/posts/" <%- title === 'View Posts!' ? 'class="active"' : '' %> 
+        >
+      View Posts
+    </div>
+  
     <div class="post-link">
       <a href="/posts/new" <%- title === 'Add Post!' ? 'class="active"' : '' %>
       >

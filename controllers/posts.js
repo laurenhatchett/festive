@@ -89,8 +89,8 @@ function update(req, res){
   .then(post => {
     if (post.owner.equals(req.user.profile._id)){
       post.updateOne(req.body)
-      then(updatedPost =>{
-        res.redirect(`/posts/${post._id}`)
+      .then(updatedPost =>{
+        res.redirect('/posts/')
       })
     } else {
       throw new Error('NOT AUTHORIZED')
@@ -98,6 +98,41 @@ function update(req, res){
   })
   .catch(err => {
     console.log(err)
+    res.redirect('/')
+  })
+}
+
+function createComments(req, res){
+  Post.findById(req.params.id)
+  .then(post => {
+    post.comments.push(req.body)
+    post.save()
+    .then(() =>{
+      res.redirect(`/posts/${post._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function deleteComments(req, res){
+  Post.findById(req.params.postId)
+  .then(post => {
+    console.log(post)
+    post.comments.id(req.params.postId).remove()
+    post.save()
+    .then(() => {
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/posts/${post._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err, req.params.id)
     res.redirect('/')
   })
 }
@@ -111,4 +146,6 @@ export {
   edit,
   deletePost as delete,
   update,
+  createComments,
+  deleteComments,
 }

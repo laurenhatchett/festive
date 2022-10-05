@@ -1,4 +1,5 @@
 <%- include('../partials/html-head.ejs') %>
+<link rel="stylesheet" href="/stylesheets/posts/show.css">
 <%- include('../partials/nav.ejs') %>
 
 <section>
@@ -7,25 +8,36 @@
 
   <h2><%= post.owner ? post.owner.name : "Unknown"%>'s Post Details:</h2>
 
-  <h1><%= post.text %></h1>
-
-  
-
-  <a href="/posts/<%= post._id %>/edit">
-  <button type="submit">Edit Post!</button>
-  </a>
-
-
-  <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Delete post!
-    </button>
-  </form>
-
-<a href="/posts">
-  <button>Post It!</button>
-</a>
-
-
+  <div>
+    <div>
+      <h1><%= post.text %></h1>
+    </div>
+    <div>
+      <ul>
+        <li><% post.comment %> </li>
+      </ul>
+    </div>
+    <div>
+      <form id="add-comment-form" action="/posts/<%= post._id %>/comments" method="POST">
+        <input name="text">
+        <button type="submit">Add Comment</button>
+    </form>
+  </div>
+  <div>
+    <a href="/posts/<%= post._id %>/edit">
+      <button type="submit">Edit Post!</button>
+    </a>
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Delete post!
+      </button>
+    </form>
+  </div>
+  <div>
+    <a href="/posts">
+      <button>Post It!</button>
+    </a>
+  </div>
+</div>
 </section>
 
 
