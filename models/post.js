@@ -11,7 +11,8 @@ const commentSchema = new Schema ({
 
 const postSchema = new Schema({
   text: String,
-
+  details: String,
+  holiday: String,
   owner: { type: Schema.Types.ObjectId, ref: "Profile"},
   category: String,
   comments:[commentSchema]

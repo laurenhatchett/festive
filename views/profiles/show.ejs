@@ -15,11 +15,9 @@
     <h2>Your Posts!</h2>
     
     <% profile.posts.forEach(post =>{ %>
-      <%= post.text %> 
+      <a href="/posts/<%= post._id %>"><%= post.text %></a>
     <% }) %> 
 
-    <h2>Saved Posts!</h2>
-    //show posts from other users that user has saved
   <% } %>
 </main>
 

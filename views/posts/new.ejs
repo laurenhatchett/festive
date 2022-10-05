@@ -9,15 +9,28 @@
       <input
       type="text"
       name="text"
+      placeholder="title"
       autocomplete="off">
+      <select name="holiday">
+        <option selected disabled>Holiday</option>
+        <option value="Indigenous-Peoples-Day">Indigenous People's Day</option>
+        <option value="Christmas">Christmas</option>
+        <option value="Halloween">Halloween</option>
+        <option value="Thanksgiving">Thanksgiving</option>
+        <option value="Kwanzaa">Kwanzaa</option>
+        <option value="Hanukkah">Hanukkah</option>
+        <option value="New-Years-Eve">New Years Eve</option>
+        
+      </select>
       <select name="category">
         <option selected disabled>Category</option>
         <option value="Recipe">Recipe</option>
         <option value="Movie">Movie</option>
-        <option value="Halloween">Halloween</option>
-        <option value="Thanksgiving">Thanksgiving</option>
-        
+        <option value="Craft">Craft</option>
+        <option value="Outing">Outing</option>
+        <option value="Other">Other</option>
       </select>
+      <textarea name="details" rows="6" placeholder="Add any details about this post..."></textarea>
       <button type="submit">Submit Post</button>
     </form>
     <% } %>

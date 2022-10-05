@@ -7,7 +7,7 @@ function postsIndex(req, res) {
   .then(posts => {
     res.render('posts', {
       posts,
-      title: req.query ? req.query.category : "View posts"
+      title: req.query ? req.query.holiday : "View posts"
     })
   })
   .catch(err => {
@@ -50,7 +50,8 @@ function show(req, res) {
     console.log(post)
     res.render('posts/show', {
       post,
-      title: 'Are you ready to submit your post? '
+      title: 'Post Details',
+      author: post?.owner.some(profile => profile._id.equals(req.user.profile._id))
     })
   })
   .catch(err => {

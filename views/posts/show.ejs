@@ -4,14 +4,15 @@
 
 <section>
 
-  <h1><%= title %></h1>
 
   <h2><%= post.owner ? post.owner.name : "Unknown"%>'s Post Details:</h2>
 
   <div>
     <div>
       <h1><%= post.text %></h1> 
-      <%= post.owner.name %> 
+      <h3><%= post.holiday %> <%= post.category %>  </h3>
+      <p><%= post.details %></p>
+      <p>Posted by: <%= post.owner.name %>  </p>
       <img src="<%= post.owner.avatar  %>">
     </div>
     <div>
@@ -32,6 +33,14 @@
     </form>
   </div>
   <div>
+    <form id="delete-comment-form" action="/posts/<%= post._id %>/comments?method=DELETE"
+    method="POST">
+    <button type="submit">Delete Comment</button>
+    </form>
+  </div>
+
+  <% if (author){ %>
+  <div>
     <a href="/posts/<%= post._id %>/edit">
       <button type="submit">Edit Post!</button>
     </a>
@@ -40,9 +49,11 @@
       </button>
     </form>
   </div>
+<% } %> 
+
   <div>
     <a href="/posts">
-      <button>Post It!</button>
+      <button>Go to All Posts!</button>
     </a>
   </div>
 </div>
