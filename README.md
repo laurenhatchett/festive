@@ -44,9 +44,8 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 
 ### Credits
 
-- **Hunter** 
-- **Beryl**
-
+- **Hunter** Thank you for your assistance with reorganizing my ERD and technical support throughout the creation of this project.
+- **Beryl** Thank you for helping with technical support and CSS styling. 
 - Whimsical
 - [Trello](https://www.trello.com) for workflow organizer
 - [Fly.io](https://www.fly.io) for deployment
