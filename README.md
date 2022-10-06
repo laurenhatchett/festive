@@ -7,7 +7,8 @@ Festive is an interactive website to help users get inspired for the end of the 
 ---
 
 ### View Website Application here
-
+[Festive](https://www.festive.fly.dev)
+---
 ### Planning Materials
 
 https://whimsical.com/festive-DwEVJSB8H9Cnsj4a4uPm6d
@@ -43,8 +44,8 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 
 ### Credits
 
-- Hunter
-- Beryl
+- **Hunter** 
+- **Beryl**
 
 - Whimsical
 - Trello
