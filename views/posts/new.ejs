@@ -14,8 +14,9 @@
         </form>
       </div>
     </div>
-    <div id="new-details-container">
-        <div id="new-holiday-select">
+    <div class="new-details-container">
+        <div id="holiday-category-container">
+          <div id="holiday-select">
           <select name="holiday">
             <option selected disabled>Holiday</option>
             <option value="Indigenous-Peoples-Day">Indigenous People's Day</option>
@@ -27,6 +28,7 @@
             <option value="New-Years-Eve">New Years Eve</option>
         </div>
           </select>
+        </div>
         <div id="new-category-select">
           <select name="category">
             <option selected disabled>Category</option>
@@ -38,9 +40,13 @@
           </select>
         </div>
     </div>
-      <div id="textarea-input">
-      <textarea name="details" rows="6" placeholder="Add any details about this post..."></textarea>
-      <button type="submit">Submit Post</button>
+      <div id="textarea-button-container">
+        <div id="new-textarea-input">
+          <textarea id="textarea-box" name="details" rows="6" placeholder="Add any details about this post..."></textarea>
+        </div>
+        <div id="new-submit-button">
+          <button type="submit">Submit Post</button>
+        </div>
       </div>
     <% } %>
   </div>

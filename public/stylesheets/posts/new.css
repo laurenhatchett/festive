@@ -1,14 +1,13 @@
-section {
+body{
   min-height: 100vh;
+}
+
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-/* h1 {
-
-} */
 
 div.newcard-div {
   display: flex;
@@ -16,30 +15,71 @@ div.newcard-div {
   justify-content: center;
   align-items: center;
   height:70%;
-  width:50%;
+  width:45%;
   border:1px solid black;
-  margin:5px 0 0 0;
+  margin:20px;
 }
 
 #newcard-title {
   display:flex;
   flex-direction: column;
   align-items:center;
-  border-bottom: 1px solid black;
+  background-color: #998862;
   width: 100%;
+  padding:10px;
+  margin:0px;
+  border-bottom: 1px solid black;
 }
 
-/* #newform-title {
-  align-items: center;
-} */
+#title-form {
+  height:30px;
+}
 
-#new-details-container {
+.new-details-container {
   width:100%;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
 }
 
-#textarea-input {
+
+#holiday-category-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  margin:0px;
+}
+
+#holiday-select {
+  width:30%;
+}
+
+#new-category-select {
+  width:30%;
+  margin: 0 0 0 10px;
+}
+
+#textarea-button-container {
+  border-top: 1px solid black;
   display:flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding:20px;
+  margin:10px 0 0 0;
+}
+
+#new-textarea-input {
+  margin: 0 0 10px 0;
+  width:60%;
+}
+
+#textarea-box {
+  width: 100%;
+}
+
+#new-submit-button {
+  margin-top: 5px;
 }
