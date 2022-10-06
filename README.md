@@ -7,7 +7,7 @@ Festive is an interactive website to help users get inspired for the end of the 
 ---
 
 ### View Website Application here
-[Festive](https://www.festive.fly.dev)
+[Festive](https://festive.fly.dev)
 ---
 ### Planning Materials
 
