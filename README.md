@@ -36,10 +36,9 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 ### Ice Box
 
 - Users should be able to save posts that were posted by other users and view them on their profile page
-
 - Users should be able to input or select an image to add to their posts
-
 - Users should be able to like a post
+- Responsive design for mobile use
 
 ---
 

@@ -4,6 +4,13 @@
 </head>
 <body>
   <nav>
+    <div class="home-link">
+      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>
+      >
+    Home
+    </div>
+
+
     <div class="viewposts-link">
       <a href="/posts/" <%- title === 'View Posts!' ? 'class="active"' : '' %> 
         >
