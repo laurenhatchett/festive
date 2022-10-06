@@ -52,7 +52,7 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 - Fly.io
 
 - (font type)
-- (color pallete)
-- (favicon)
+- [Coolors.co](https://www.https://coolors.co/?home) is where I created my color pallete
+-  [Favicon.io](https:www.https://favicon.io/emoji-favicons/orange-heart/)is the source for my favicon
 
 
