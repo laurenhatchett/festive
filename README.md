@@ -49,9 +49,8 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 - **Beryl**
 
 - Whimsical
-- Trello
-- Fly.io
-
+- [Trello](https://www.trello.com) for workflow organizer
+- [Fly.io](https://www.fly.io) for deployment
 - (font type)
 - [Coolors.co](https://www.https://coolors.co/?home) is where I created my color pallete
 -  [Favicon.io](https:www.https://favicon.io/emoji-favicons/orange-heart/)is the source for my favicon
