@@ -2,7 +2,7 @@
 
 ### Getting Started
 
-Festive is an interactive website to help users get inspired for the end of the year holidays. Users are able to share holiday ideas through adding and viewing posts. With each post, a user can select from the following holidays: *Halloween, Indigenous People's Day, Thanksgiving, Kwanzaa, Hanukkah, Christmas, and New Year's Eve.* In addition, users also select a category that fits their post. The categories include *recipe, movie, craft, outing, and other*. After writing their posts, a user has the ability to edit, delete, or post their idea. Users can view all posts, but they also have the ability to select a holiday to view all the posts related to that specific holiday. Users can also see their own posts on their profile page. Users all able to interact with others users on a post through the comment section. 
+Festive is an interactive website to help users get inspired for the end of the year holidays. Users are able to share holiday ideas through adding and viewing posts. With each post, a user can select from the following holidays: *Halloween, Indigenous People's Day, Thanksgiving, Kwanzaa, Hanukkah, Christmas, and New Year's Eve.* In addition, users also select a category that fits their post. The categories include *recipe, movie, craft, outing, and other*. After writing their posts, a user has the ability to edit, delete, or post their idea. Users can view all posts, but they also have the ability to select a holiday to view all the posts related to that specific holiday. Users can also see their own posts on their profile page. Users all able to interact with others users on a post through the comment section. Users need a valid google email address to be able to access all the features of the website.
 
 ---
 
@@ -31,6 +31,7 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 - Git
 - Mongoose
 - Google OAuth
+- VS Code
 
 
 ### Ice Box
