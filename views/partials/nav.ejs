@@ -1,55 +1,42 @@
-  <% if (!user) { %>
-    <script defer src="https://accounts.google.com/gsi/client"></script>
+<% if (!user) { %>
+  <script defer src="https://accounts.google.com/gsi/client"></script>
   <% } %>
-</head>
-<body>
-  <nav>
-    <div class="home-link">
-      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>
-      >
-    Home
-    </div>
+    </head>
 
-
-    <div class="viewposts-link">
-      <a href="/posts/" <%- title === 'View Posts!' ? 'class="active"' : '' %> 
-        >
-      View Posts
-    </div>
-  
-    <div class="post-link">
-      <a href="/posts/new" <%- title === 'Add Post!' ? 'class="active"' : '' %>
-      >
-      Add Post
-      </a>
-    </div>
-    <div class="profiles-link">
-      <a href="/profiles/index" <%- title === 'User Profiles!' ? 'class="active"' : '' %>
-        >
-      Profiles
-      </a>
-    </div>
-    <div>
-    <% if (user) { %>
-      <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>  
-      </a>
-    <% } else { %>
-    </div>
-      <div 
-        id="g_id_onload"
-        data-client_id="<%= googleClientID %>"
-        data-login_uri="/auth/google"
-        data-auto_prompt="false"
-      ></div>
-      <div 
-        class="g_id_signin right"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-      ></div>
-    <% } %>
-  </nav>
+    <body>
+      <nav id="nav-links">
+        <div class="home-link">
+          <a href="/" <%- title==='Home' ? 'class="active"' : '' %>
+            >
+            Home
+        </div>
+        <div class="viewposts-link">
+          <a href="/posts/" <%- title==='View Posts!' ? 'class="active"' : '' %>
+            >
+            View Posts
+        </div>
+        <div class="post-link">
+          <a href="/posts/new" <%- title==='Add Post!' ? 'class="active"' : '' %>
+            >
+            Add Post
+          </a>
+        </div>
+        <div class="profiles-link">
+          <a href="/profiles/index" <%- title==='User Profiles!' ? 'class="active"' : '' %>
+            >
+            Profiles
+          </a>
+        </div>
+        <div>
+          <% if (user) { %>
+            <a href="/auth/logout" class="right">
+              <button type="submit">Logout</button>
+            </a>
+            <% } else { %>
+        </div>
+        <div id="g_id_onload" data-client_id="<%= googleClientID %>" data-login_uri="/auth/google"
+          data-auto_prompt="false"></div>
+        <div class="g_id_signin right" data-type="standard" data-size="large" data-theme="outline"
+          data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+        <% } %>
+      </nav>

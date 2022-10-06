@@ -14,41 +14,34 @@ html {
 body {
   background-color: #eeddba;
   color:black;
+  height: 100vh;
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+    'Helvetica Neue', sans-serif; */
   margin: 0;
 }
 
+section {
+  height: 80%;
+}
 
+.holiday-search-links {
+  border: 1px solid black; 
+  height: 60%;
+}
 
-main {
+#thanksgiving-link {
+  border:1px solid black;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-}
-
-nav {
-  background-color: #75482c;
-  color: white;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: right;
-  padding: 10px;
-  min-height: 60px;
+  width:30%;
+  height: 10%;
 }
 
-a {
-  color: white;
-}
-
-div {
-  margin: 0 10px 0 10px;
+#halloween-link {
+  
 }
 
 
-
-.right {
-  margin-left: auto;
-}
