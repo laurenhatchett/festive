@@ -39,7 +39,9 @@
 
 
       <div id="comment-container">
-        <div id="comment-title"><h2>Comments</h2></div>
+        <div id="comment-title">
+          <h2>Comments</h2>
+        </div>
         <ul>
           <% post.comments.forEach(comment=>{ %>
             <div id="comment-content">
@@ -55,30 +57,36 @@
         </ul>
         <div>
           <form id="add-comment-form" action="/posts/<%= post._id %>/comments" method="POST">
-            <textarea name="text" placeholder="Add a comment here.." cols="6"></textarea>
-            <button type="submit">Add Comment</button>
+            <textarea id="comment-textarea" name="text" placeholder="Add a comment here.." cols="6"></textarea>
+            <div id="add-comment">
+            <button id="add-comment-btn" type="submit">Add Comment</button>
+          </div>
           </form>
         </div>
       </div>
 
 
       <% if (isSelf){ %>
-        <div>
-          <a href="/posts/<%= post._id %>/edit">
-            <button type="submit">Edit Post!</button>
-          </a>
-          <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-            <button class="btn" type="submit">Delete post!
-            </button>
-          </form>
-        </div>
-        <% } %>
-
-          <div>
-            <a href="/posts">
-              <button>Go to All Posts!</button>
+        <div class="buttons">
+          <div id="edit-btn">
+            <a href="/posts/<%= post._id %>/edit">
+              <button type="submit">Edit Post!</button>
             </a>
+            <div id="delete-btn">
+              <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                <button class="btn" type="submit">Delete post!
+                </button>
+              </form>
+            </div>
           </div>
+          <% } %>
+
+            <div>
+              <a href="/posts">
+                <button>Go to All Posts!</button>
+              </a>
+            </div>
+        </div>
     </section>
 
 
