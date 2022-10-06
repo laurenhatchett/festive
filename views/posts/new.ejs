@@ -1,38 +1,47 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/posts/new.css">
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>Add Post!</h1>
+<h1>Add Post!</h1>
+<section class="new-body">
+	<div class="newcard-div">
   <% if (user) { %>
-	<div>
-    <form id="new-form" action="/posts/" method="POST" >
-      <input
-      type="text"
-      name="text"
-      placeholder="title"
-      autocomplete="off">
-      <select name="holiday">
-        <option selected disabled>Holiday</option>
-        <option value="Indigenous-Peoples-Day">Indigenous People's Day</option>
-        <option value="Christmas">Christmas</option>
-        <option value="Halloween">Halloween</option>
-        <option value="Thanksgiving">Thanksgiving</option>
-        <option value="Kwanzaa">Kwanzaa</option>
-        <option value="Hanukkah">Hanukkah</option>
-        <option value="New-Years-Eve">New Years Eve</option>
-        
-      </select>
-      <select name="category">
-        <option selected disabled>Category</option>
-        <option value="Recipe">Recipe</option>
-        <option value="Movie">Movie</option>
-        <option value="Craft">Craft</option>
-        <option value="Outing">Outing</option>
-        <option value="Other">Other</option>
-      </select>
+    <div id="newcard-title">
+      <div id="newform-title">
+        <form action="/posts/" method="POST">
+          <input type="text"name="text" id="title-form"
+                placeholder="title" autocomplete="off">
+        </form>
+      </div>
+    </div>
+    <div id="new-details-container">
+        <div id="new-holiday-select">
+          <select name="holiday">
+            <option selected disabled>Holiday</option>
+            <option value="Indigenous-Peoples-Day">Indigenous People's Day</option>
+            <option value="Christmas">Christmas</option>
+            <option value="Halloween">Halloween</option>
+            <option value="Thanksgiving">Thanksgiving</option>
+            <option value="Kwanzaa">Kwanzaa</option>
+            <option value="Hanukkah">Hanukkah</option>
+            <option value="New-Years-Eve">New Years Eve</option>
+        </div>
+          </select>
+        <div id="new-category-select">
+          <select name="category">
+            <option selected disabled>Category</option>
+            <option value="Recipe">Recipe</option>
+            <option value="Movie">Movie</option>
+            <option value="Craft">Craft</option>
+            <option value="Outing">Outing</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+    </div>
+      <div id="textarea-input">
       <textarea name="details" rows="6" placeholder="Add any details about this post..."></textarea>
       <button type="submit">Submit Post</button>
-    </form>
+      </div>
     <% } %>
   </div>
 </section>

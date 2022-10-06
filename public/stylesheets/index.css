@@ -14,7 +14,7 @@ html {
 body {
   background-color: #eeddba;
   color:black;
-  height: 100vh;
+  min-height: 100vh;
   /* Use a system font, if none are available use any found sans-sarif font */
   /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif; */
@@ -22,18 +22,18 @@ body {
 }
 
 .links {
-  height: 60%;
+  height: 600px;
+  margin:100px 0 0 0;
 }
 
 .holiday-search-links {
   border: 1px solid black; 
-  height: 40%;
+  height: 60%;
   display: flex;
   flex-direction:row;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
-
+  flex-wrap: wrap;
 }
 
 #indigenous-peoples-day-link {
@@ -44,7 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   width:30%;
-  height: 30%;
+  height: 20%;
 }
 
 #thanksgiving-link {
@@ -110,7 +110,7 @@ body {
   justify-content: center;
   align-items: center;
   width:30%;
-  height: 25%;
+  height: 20%;
 }
 
 
