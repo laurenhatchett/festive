@@ -20,21 +20,28 @@ body {
   margin: 0;
 }
 
-nav {
-  background-color: white;
-  color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  min-height: 60px;
-}
-
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
+nav {
+  background-color: white;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 10px;
+  min-height: 60px;
+}
+
+div {
+  margin: 0 10px 0 10px;
+}
+
+
 
 .right {
   margin-left: auto;

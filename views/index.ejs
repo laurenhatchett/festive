@@ -2,15 +2,9 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-
+  <h1> Welcome to </h1>
+  <h1 class="festive">Festive!</h1>
+  
     <section>
       <a href="/posts?holiday=Thanksgiving">Thanksgiving</a>
       <a href="/posts?holiday=Halloween">Halloween</a>
@@ -23,7 +17,7 @@
     </section>
 
 
-  <% } %>
+
 </main>
 
 

@@ -1,58 +1,85 @@
 <%- include('../partials/html-head.ejs') %>
-<link rel="stylesheet" href="/stylesheets/posts/show.css">
-<%- include('../partials/nav.ejs') %>
+  <link rel="stylesheet" href="/stylesheets/posts/show.css">
+  <%- include('../partials/nav.ejs') %>
 
-<section>
-
-
-  <h2><%= post.owner ? post.owner.name : "Unknown"%>'s Post Details:</h2>
-
-  <div>
-    <div>
-      <h1><%= post.text %></h1> 
-      <h3><%= post.holiday %> <%= post.category %>  </h3>
-      <p><%= post.details %></p>
-      <p>Posted by: <%= post.owner.name %>  </p>
-      <img src="<%= post.owner.avatar  %>">
-    </div>
-    <div>
-      <ul>
-        <% post.comments.forEach(comment =>{ %>
-          <li>
-            <img src="<%= comment.owner.avatar  %>">
-            <%= comment.owner.name %> 
-            <%= comment.text %>
-          </li>
-        <%  }) %> 
-      </ul>
-    </div>
-    <div>
-      <form id="add-comment-form" action="/posts/<%= post._id %>/comments" method="POST">
-        <input name="text">
-        <button type="submit">Add Comment</button>
-    </form>
-  </div>
-  
-
-  <% if (isSelf){ %>
-  <div>
-    <a href="/posts/<%= post._id %>/edit">
-      <button type="submit">Edit Post!</button>
-    </a>
-    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-      <button class="btn" type="submit">Delete post!
-      </button>
-    </form>
-  </div>
-<% } %> 
-
-  <div>
-    <a href="/posts">
-      <button>Go to All Posts!</button>
-    </a>
-  </div>
-</div>
-</section>
+    <section class="show-body">
 
 
-<%- include('../partials/footer.ejs') %>
+      <div class="card-div">
+        <div id="card-title">
+          <h1>
+            <%= post.text %>
+          </h1>
+        </div>
+        <div id="post-details-container">
+          <div id="post-details">
+            <p>
+              <%= post.details %>
+            </p>
+          </div>
+        </div>
+        <div id="category-holiday">
+          <div id="holiday-div">
+            <h3>
+              <%= post.holiday %>
+            </h3>
+          </div>
+          <div id="category-div">
+            <h3>
+              <%= post.category %>
+            </h3>
+          </div>
+        </div>
+        <div id="author-pic">
+          <p>Posted by: <%= post.owner.name %>
+          </p>
+          <img id="pic" src="<%= post.owner.avatar  %>">
+        </div>
+      </div>
+
+
+      <div id="comment-container">
+        <div id="comment-title"><h2>Comments</h2></div>
+        <ul>
+          <% post.comments.forEach(comment=>{ %>
+            <div id="comment-content">
+              <li>
+                <%= comment.text %>
+              </li>
+              <div id="author-name">
+                <p>-<%= comment.owner.name %>
+                </p>
+              </div>
+            </div>
+            <% }) %>
+        </ul>
+        <div>
+          <form id="add-comment-form" action="/posts/<%= post._id %>/comments" method="POST">
+            <textarea name="text" placeholder="Add a comment here.." cols="6"></textarea>
+            <button type="submit">Add Comment</button>
+          </form>
+        </div>
+      </div>
+
+
+      <% if (isSelf){ %>
+        <div>
+          <a href="/posts/<%= post._id %>/edit">
+            <button type="submit">Edit Post!</button>
+          </a>
+          <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <button class="btn" type="submit">Delete post!
+            </button>
+          </form>
+        </div>
+        <% } %>
+
+          <div>
+            <a href="/posts">
+              <button>Go to All Posts!</button>
+            </a>
+          </div>
+    </section>
+
+
+    <%- include('../partials/footer.ejs') %>
