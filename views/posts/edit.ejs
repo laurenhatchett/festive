@@ -1,28 +1,59 @@
 <%- include('../partials/html-head.ejs') %>
-<%- include('../partials/nav.ejs') %>
-
-<section>
-  
-  <h1>Update Post!</h1>
-
-  <form id="post-form" action="/posts/<%= post._id %>?_method=PUT" method="POST">
-      <input
-      type="text"
-      name="text"
-      autocomplete="off">
-      <select>
-        <option selected disabled>Category</option>
-        <option>Recipe</option>
-        <option>Movie</option>
-        <option>Halloween</option>
-        <option>Thanksgiving</option>
-      </select>
-
-      <button type="submit">Save Post!</button>
-    </form>
-  
-  
-</section>
+  <link rel="stylesheet" href="/stylesheets/posts/edit.css">
+  <%- include('../partials/nav.ejs') %>
 
 
-<%- include('../partials/footer.ejs') %>
+
+    <h1>Update Post!</h1>
+    <section>
+      <form id="edit-form" action="/posts/<%= post._id %>?_method=PUT" method="POST">
+        <% if (user) { %>
+          <div class="editcard-div">
+            <div id="editform-title">
+              <input type="text" name="text" id="edittitle-form" placeholder="title" autocomplete="off">
+            </div>
+            <div class="edit-details-container">
+
+              <div id="edit-holiday-select">
+                <select name="holiday">
+                  <option selected disabled>Holiday</option>
+                  <option value="Indigenous-Peoples-Day">Indigenous People's Day</option>
+                  <option value="Christmas">Christmas</option>
+                  <option value="Halloween">Halloween</option>
+                  <option value="Thanksgiving">Thanksgiving</option>
+                  <option value="Kwanzaa">Kwanzaa</option>
+                  <option value="Hanukkah">Hanukkah</option>
+                  <option value="New-Years-Eve">New Years Eve</option>
+                </select>
+              </div>
+
+              <div id="edit-category-select">
+                <select name="category">
+                  <option selected disabled>Category</option>
+                  <option value="Recipe">Recipe</option>
+                  <option value="Movie">Movie</option>
+                  <option value="Craft">Craft</option>
+                  <option value="Outing">Outing</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div id="edittextarea-button-container">
+              <div id="new-textarea-input">
+                <textarea id="edittextarea-box" name="details" rows="6"
+                  placeholder="Add any details about this post..."></textarea>
+              </div>
+            </div>
+            <div id="edit-save-button">
+              <a href="/posts">
+                <button type="submit">Save Post!</button>
+              </a>
+            </div>
+            <% } %>
+      </form>
+
+
+    </section>
+
+
+    <%- include('../partials/footer.ejs') %>

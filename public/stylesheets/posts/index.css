@@ -1,6 +1,10 @@
 body {
   min-height: 100vh;
 }
+
+h1{
+  text-align: center;
+}
 .post-index-section {
   display: flex;
   flex-direction: column;
@@ -28,7 +32,7 @@ body {
 }
 
 #post-text {
-  font-size: 3vmin;
+  font-size: 2vmin;
   text-align: center;
 }
 
@@ -58,7 +62,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2vmin;
+  font-size: 1vmin;
   flex-basis: fit-content;
 }
 
@@ -70,7 +74,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2vmin;
+  font-size: 1vmin;
   flex-basis: fit-content;
 }
 

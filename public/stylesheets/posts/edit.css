@@ -1,0 +1,104 @@
+body{
+  min-height: 100vh;
+}
+
+h1{
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+.editcard-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:70%;
+  width:45%;
+  border:1px solid black;
+  margin:20px;
+}
+
+#editform-title {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  background-color: #998862;
+  width: 100%;
+  padding:10px;
+  margin:0px;
+  border-bottom: 1px solid black;
+}
+
+#edittitle-form {
+  height:30px;
+}
+
+.edit-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width:100%;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+#edit-holiday-select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  margin:0px;
+  min-width:30%;
+  margin-right: 5px;
+} 
+
+#edit-category-select {
+  width:30%;
+  margin-left: 5px;
+}
+
+#edittextarea-button-container {
+  border-top: 1px solid black;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding:20px;
+  margin:10px 0 0 0;
+}
+
+#edit-textarea-input {
+  margin: 0 0 10px 0;
+  width:60%;
+}
+
+#textarea-box {
+  width: 100%;
+}
+
+#edit-save-button {
+  margin: 5px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
