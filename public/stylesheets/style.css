@@ -18,6 +18,7 @@ body {
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
+  min-height: 100vh;
 }
 
 
@@ -27,6 +28,12 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 200px;
+}
+
+#festive-font {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 100px;
 }
 
 nav {

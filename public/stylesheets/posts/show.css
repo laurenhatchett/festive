@@ -49,6 +49,8 @@
   margin:10px;
 }
 
+
+
 #category-holiday {
   display: flex;
   flex-direction: row;
@@ -117,15 +119,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  width:80%;
+  width:100%;
   padding: 0;
   margin: 0;
-  border: 1px solid orange;
 }
 
 #comment-text-area {
   overflow-wrap: break-word;
-  border: 1px solid green;
   width:95%;
   margin:10px 0 0 0;
   padding:0;
@@ -148,8 +148,7 @@ overflow-wrap: break-word;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  width:100%;
-  border: 1px solid purple;
+  width:80%;
 }
 
 #add-comment-form {
