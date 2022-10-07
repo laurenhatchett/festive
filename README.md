@@ -39,7 +39,7 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 - Users should be able to save posts that were posted by other users and view them on their profile page
 - Users should be able to input or select an image to add to their posts
 - Users should be able to like a post
-- More CSS styling (buttons, dynamic cards, etc.)
+- More CSS styling (buttons, dynamic cards, font styling, etc.)
 - Responsive design for mobile use
 
 ---
