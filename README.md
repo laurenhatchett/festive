@@ -41,6 +41,7 @@ https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 - Users should be able to like a post
 - More CSS styling (buttons, dynamic cards, font styling, etc.)
 - Responsive design for mobile use
+- add more inclusive holidays/celebrations
 
 ---
 
