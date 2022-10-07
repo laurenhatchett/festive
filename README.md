@@ -17,7 +17,7 @@ https://whimsical.com/festive-DwEVJSB8H9Cnsj4a4uPm6d
 
 https://whimsical.com/festive-erd-BM28k5HHcjgCGbXTWK71yV
 
-![festive ERD]("https://user-images.githubusercontent.com/109775689/194551673-9004d4c7-b00e-4303-9b5a-20301d72979a.png")
+![festive ERD](https://user-images.githubusercontent.com/109775689/194551673-9004d4c7-b00e-4303-9b5a-20301d72979a.pngg)
 
 ---
 
