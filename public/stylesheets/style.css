@@ -36,6 +36,11 @@ main {
   font-size: 100px;
 }
 
+p {
+  font-size: 50px;
+  margin: 0px
+}
+
 nav {
   background-color: #75482c;
   color: white;
