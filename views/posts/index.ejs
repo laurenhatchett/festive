@@ -1,19 +1,47 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+  <link rel="stylesheet" href="/stylesheets/posts/index.css">
+  <%- include('../partials/nav') %>
 
-<section>
-  <h1> <%= title %> </h1>
+    <h1>
+      View Posts
+    </h1>
 
-  
-  <ul>
-    <% posts.forEach(post => { %>
-      <li>
-        <a href="/posts/<%= post._id %>"><%= post.text %></a>
+    <section class="post-index-section">
+
+      <% posts.forEach(post=> { %>
         
-      </li>
-    <% }) %>
-  </ul>
-	
-</section>
+      <a href="/posts/<%= post._id %>">
+        <div class="post-index-card-div">
+          <div id="post-index-card-title">
+            <h1 id="post-text">
+              <%= post.text %>
+            </h1>
+          </div>
+          <div id="post-index-details-container">
+            <div id="post-index-category-holiday">
+              <div id="post-index-holiday-div">
+                <h3>
+                  <%=post.holiday%>
+                </h3>
+              </div>
+              <div id="post-index-category-div">
+                <h3>
+                  <%=post.category%>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div id="post-index-button">
+              <button>View Post!</button>
+          </div>
+        </div>
+      </a>
+      
+      <% }) %>
+      
+      
+    </section>
+    
 
-<%- include('../partials/footer') %>
+
+    <%- include('../partials/footer') %>

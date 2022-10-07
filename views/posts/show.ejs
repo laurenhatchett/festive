@@ -42,19 +42,21 @@
         <div id="comment-title">
           <h2>Comments</h2>
         </div>
-        <ul>
+        <div id="comment-text-area">
+          <!-- <ul> -->
           <% post.comments.forEach(comment=>{ %>
             <div id="comment-content">
-              <li>
+              <!-- <li> -->
                 <%= comment.text %>
-              </li>
+              <!-- </li> -->
               <div id="author-name">
                 <p>-<%= comment.owner.name %>
                 </p>
               </div>
             </div>
             <% }) %>
-        </ul>
+        <!-- </ul> -->
+      </div>
         <div>
           <form id="add-comment-form" action="/posts/<%= post._id %>/comments" method="POST">
             <textarea id="comment-textarea" name="text" placeholder="Add a comment here.." cols="6"></textarea>
@@ -72,13 +74,14 @@
             <a href="/posts/<%= post._id %>/edit">
               <button type="submit">Edit Post!</button>
             </a>
+          </div>
             <div id="delete-btn">
               <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
                 <button class="btn" type="submit">Delete post!
                 </button>
               </form>
             </div>
-          </div>
+          
           <% } %>
 
             <div>

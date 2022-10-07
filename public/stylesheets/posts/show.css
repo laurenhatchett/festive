@@ -116,8 +116,32 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width:100%;
+  flex-wrap: wrap;
+  width:80%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid orange;
 }
+
+#comment-text-area {
+  overflow-wrap: break-word;
+  border: 1px solid green;
+  width:95%;
+  margin:10px 0 0 0;
+  padding:0;
+}
+
+/* ul {
+  border: 1px solid blue;
+  overflow-y: auto;
+}
+
+li {
+border: 1px solid orangered;
+flex-wrap: wrap;
+width: 100%;
+overflow-wrap: break-word;
+} */
 
 #author-name {
   display: flex;
@@ -125,6 +149,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   width:100%;
+  border: 1px solid purple;
 }
 
 #add-comment-form {
@@ -138,6 +163,7 @@
 
 #comment-textarea {
   width:60%;
+  
 
 }
 
@@ -149,6 +175,10 @@
 
 } */
 
-.buttons-div {
-  border: 1px solid black;
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
